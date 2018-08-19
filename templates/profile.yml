@@ -1,0 +1,182 @@
+profile:
+  social_links:
+    - name: Github
+      icon: icon-github-sign
+      link: 'https://github.com/2997ms'
+    - name: Twitter
+      icon: icon-twitter-sign
+      link: 'https://twitter.com/2997ms'
+
+experience:
+  - name: COBINHOOD
+    link: 'http://www.cobinhood.com'
+    logo: cobinhood.png
+    time: Aug 2017 - Current
+    title: Co-founder, CTO
+    description: COBINHOOD is a ZERO trading fee cryptocurrency exchange and aims to become a financial center for the blockchain era.
+    tags: ['Current', 'Fulltime']
+  - name: Google
+    link: 'http://www.google.com'
+    logo: google.png
+    time: Sep 2014 - Jan 2018
+    title: Senior Software Engineer
+    description: Works on Chromebook and Chrome OS. Was part of Chrome OS Factory, Chrome OS Kernel and Chrome OS Touch team. Part of the team that made Acer Chromebook R13, Samsung Chromebook Pro and Google Pixelbook.
+    tags: ['Senior', 'Fulltime']
+  - name: IBM
+    link: 'http://www.ibm.com/'
+    logo: ibm.png
+    time: Jul 2013 - Aug 2013
+    title: Software Engineering Intern
+    description: Automatic test framework development, Continuous integration and various improvements on part of IBM POWER 8 Firmware component.
+    tags: ['Summer Intern']
+
+  - name: Shotwill
+    link: 'http://www.shotwill.com/'
+    logo: shotwill.png
+    time: Feb 2011 - Aug 2012
+    title: Co-Founder, CTO
+    description: A stock image selling start-up I founded with my friends, which is closed in August 2012 due to operation issues.
+    tags: ['Startup']
+
+  - name: 0xlab
+    link: 'http://www.0xlab.org/'
+    logo: 0xlab.png
+    time: Jul 2011 - Aug 2011
+    title: Software Engineering Intern
+    description: Develop <a href="#aster">Aster</a> (Android System Testing Environment and Runtime)
+    tags: ['Summer Intern']
+
+education:
+  - name: National Taiwan University
+    link: 'http://www.ntu.edu.tw/'
+    logo: ntu.png
+    time: Sep 2012 - Jun 2014
+    title: Master's Degree
+    description: Computer Science
+  - name: National Taiwan University
+    link: 'http://www.ntu.edu.tw/'
+    logo: ntu.png
+    time: Sep 2008 - Jun 2012
+    title: Bachelor's Degree
+    description: Electrical Engineering
+
+
+contributions:
+  - name: vim-tomorrow-theme
+    link: 'https://github.com/chriskempson/vim-tomorrow-theme/commits?author=aitjcize'
+  - name: micropython
+    link: 'https://github.com/micropython/micropython/commits?author=aitjcize'
+  - name: fn.py
+    link: 'https://github.com/kachayev/fn.py/commits?author=aitjcize'
+  - name: gmail-crypt
+    link: 'https://github.com/seancolyer/gmail-crypt/commits?author=aitjcize'
+  - name: libchewing
+    link: 'http://github.com/chewing/libchewing/commits?author=aitjcize'
+  - name: jToxcore
+    link: 'http://github.com/Tox/jToxcore/commits?author=aitjcize'
+  - name: Toxic
+    link: 'https://github.com/Tox/toxic/commits?author=aitjcize'
+  - name: ProjectTox-Qt-Gui
+    link: 'https://github.com/nurupo/ProjectTox-Qt-GUI/commits?author=aitjcize'
+  - name: ProjectTox-Core
+    link: 'https://github.com/irungentoo/ProjectTox-Core/commits?author=aitjcize'
+    description: Various improvments
+  - name: d3-bootstrap-plugins
+    link: 'https://github.com/zmaril/d3-bootstrap-plugins/commits?author=aitjcize'
+    time: Jun 2013
+    description: Bug fixes
+  - name: XXXTerm
+    link: 'http://repo.or.cz/w/xxxterm.git'
+    time: Dec 2011
+    description: 'Add option: maximize at startup'
+  - name: Android Open Source Project / Android SDK
+    link: 'http://source.android.com/'
+    time: Aug 2011
+    description: Add pushFile/pullFile interface for IDevice.
+  - name: 'tongwen-python'
+    link: 'https://code.google.com/p/tongwen-python'
+
+tools:
+  - name: Linux
+    score: 4.8
+  - name: C
+    score: 4.8
+  - name: Python
+    score: 4.8
+  - name: C++
+    score: 4.5
+  - name: Qt
+    score: 4.5
+  - name: Git
+    score: 4.5
+  - name: GTK
+    score: 4.3
+  - name: SQL
+    score: 4
+  - name: Go (Programming Language)
+    score: 3.5
+  - name: OpenCL
+    score: 3.5
+  - name: Java
+    score: 3.5
+  - name: Flask (Python Web Framework)
+    score: 3.5
+  - name: Ruby
+    score: 3.5
+  - name: Javascript
+    score: 3.5
+  - name: HTML / CSS
+    score: 3.2
+  - name: CUDA
+    score: 3.2
+  - name: OpenGL
+    score: 3
+  - name: SML
+    score: 2.8
+  - name: Racket
+    score: 2.8
+
+clubs:
+  - name: Code & Beer - An inside-NTU open source enthusiast's weekly gathering
+    role: Founder
+    time: Sep 2013
+  - name: Chinese Martial Art Club, National Taiwan University
+    role: Chief of Curriculum
+    time: Sep 2008 - Feb 2011
+  - name: Photography Club, National Taiwan University
+    time: Mar 2012 - Jul 2012
+  - name: Wing Chun (詠春拳), National Taiwan University
+    time: Sep 2012 - Jan 2013
+
+tags-map:
+  'Startup': success
+  'Fulltime': success
+  'Senior': primary
+  'Current': warning
+  'Summer Intern': success
+  'Open Source': success
+  'Freelance Project': info
+  'Class Project': info
+  'Python': primary
+  'Ruby': primary
+  'C': primary
+  'C++': primary
+  'Java': primary
+  'SQL': primary
+  'XML': default
+  'YAML': default
+  'Javascript': primary
+  'OpenGL': danger
+  'MySQL': info
+  'MongoDB': warning
+  'SQLite': info
+  'GStreamer': danger
+  'Android': success
+  'Qt': success
+  'GTK': info
+  'Web': primary
+  'Flask': danger
+  'Sinatra': danger
+  'd3.js': success
+  'AWS': warning
+  "COSCUP'11": info
