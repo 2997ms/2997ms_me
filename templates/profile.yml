@@ -1,0 +1,13 @@
+experience:
+  - name: Airbnb
+    link: 'http://www.airbnb.cn'
+    logo:
+    time: Apr 2018 - Current
+profile:
+  social_links:
+    - name: LinkedIn
+      icon: icon-linkedin-sign
+      link: 'https://www.linkedin.com/in/chong-wang-93524aa8/'
+    - name: Github
+      icon: icon-github-sign
+      link: 'https://github.com/2997ms'
