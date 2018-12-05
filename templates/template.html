@@ -24,7 +24,7 @@
           <h4 class="modal-title">王崇 <wangchong756@gmail.com></h4>
         </div>
         <div class="modal-body">
-          <pre></pre>
+          <pre>{{data.pgpkey}}</pre>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal" id="pgp-btn-close">Close</button>
@@ -78,11 +78,9 @@
             <li><i class="icon-li icon-pencil"></i><a href="https://2997ms.github.io">Blog</a></li>
           </ul>
           <div class="social-links">
-            
-            <a href="https://www.linkedin.com/in/chong-wang-93524aa8/" target="_blank"><i class="icon-linkedin-sign icon-4x"></i></a>
-            
-            <a href="https://github.com/2997ms" target="_blank"><i class="icon-github-sign icon-4x"></i></a>
-            
+            {% for v in data.profile.social_links %}
+            <a href="{{ v.link }}" target="_blank"><i class="{{ v.icon }} icon-4x"></i></a>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -95,27 +93,33 @@
         <h2 class="pull-left">Experience</h2>
         <span id="experience" class="anchor"></span>
       </div>
-      
-      
+      {% for v in data.experience %}
+      {% if (loop.index - 1) % 3 == 0 %}
       <div class="row">
-      
+      {% endif %}
         <div class="col-ng-4 col-md-4 col-sm-4 col-xs-12">
           <div class="text-center">
-            <a href="http://www.airbnb.cn" target="_blank">
-              <img src="static/img/None" alt="Airbnb" height="75px">
+            <a href="{{ v.link }}" target="_blank">
+              <img src="static/img/{{ v.logo }}" alt="{{ v.name }}" height="75px">
             </a>
           </div>
-          <h4>Airbnb<br /><small>Apr 2018 - Current</small></h4>
-          
+          <h4>{{ v.name }}<br /><small>{{ v.time }}</small></h4>
+          {% if v.tags %}
+          <p>
+          {% for t in v.tags %}
+            <span class="label label-{{ tagNameToClass(data, t) }}">{{ t }}</span>
+          {% endfor %}
+          </p>
+          {% endif %}
           <ul class="list-unstyled icons-ul">
-            <li><i class="icon-li icon-user"></i> </li>
-            <li><i class="icon-li icon-bookmark"></i> </li>
+            <li><i class="icon-li icon-user"></i> {{ v.title }}</li>
+            <li><i class="icon-li icon-bookmark"></i> {{ v.description }}</li>
           </ul>
         </div>
-      
+      {% if (loop.index - 1)% 3 == 2 or loop.index == len(data.experience) %}
       </div>
-      
-      
+      {% endif %}
+      {% endfor %}
       </div>
     </div>
   </div>
@@ -126,7 +130,29 @@
       <span id="education" class="anchor"></span>
     </div>
     <div class="row">
-      
+      {% for v in data.education %}
+      <div class="col-ng-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="edu-logo inline">
+          <a href="{{ v.link }}" target="_blank">
+            <img src="static/img/{{ v.logo }}" alt="{{ v.name }}" height="75px">
+          </a>
+        </div>
+        <div class="inline edu-desc">
+          <h4>{{ v.name }}<br /><small>{{ v.time }}</small></h4>
+          {% if v.tags %}
+          <p>
+          {% for t in v.tags %}
+            <span class="label label-{{ tagNameToClass(data, t) }}">{{ t }}</span>
+          {% endfor %}
+          </p>
+          {% endif %}
+          <ul class="list-unstyled icons-ul">
+            <li><i class="icon-li icon-user"></i> {{ v.title }}</li>
+            <li><i class="icon-li icon-bookmark"></i> {{ v.description }}</li>
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 
@@ -136,7 +162,75 @@
         <h2 class="pull-left">Projects</h2>
         <span id="projects" class="anchor"></span>
       </div>
-      
+      {% for v in data.projects %}
+      {% if (loop.index - 1) % 3 == 0 %}
+      <div class="row">
+      {% endif %}
+        <div class="col-ng-4 col-md-4 col-sm-4 col-xs-12">
+          {% if v.anchor %}
+          <span id="{{ v.anchor }}" class="anchor"></span>
+          {% endif %}
+          <div class="text-center">
+            <a href="static/img/{{ v.logo }}" class="highslide" onclick="return hs.expand(this)">
+              <img src="static/img/{{ v.logo }}" alt="{{ v.name|remove_tag }}" class="img-thumbnail img-responsive">
+            </a>
+          </div>
+
+          <h4>{{ v.name }}<br /><small>{{ v.time }}</small></h4>
+          {% if v.tags %}
+          <p>
+          {% for t in v.tags %}
+            <span class="label label-{{ tagNameToClass(data, t) }}">{{ t }}</span>
+          {% endfor %}
+          </p>
+          {% endif %}
+          <ul class="list-unstyled icons-ul">
+            {% if v.website %}
+            <li>
+              <i class="icon-li icon-globe"></i>
+              <a href="{{ v.website }}" target="_blank">Website</a>
+            </li>
+            {% endif %}
+            {% if v.github %}
+            <li>
+              <i class="icon-li icon-github"></i>
+              <a href="{{ v.github }}" target="_blank">Source Code</a>
+            </li>
+            {% endif %}
+            {% if v.bitbucket %}
+            <li>
+              <i class="icon-li icon-bitbucket"></i>
+              <a href="{{ v.bitbucket }}" target="_blank">Source Code</a>
+            </li>
+            {% endif %}
+            {% if v.role %}
+            <li><i class="icon-li icon-user"></i> {{ v.role }}</li>
+            {% endif %}
+            {% if v.partners %}
+            <li><i class="icon-li icon-group"></i> {{ v.partners }}</li>
+            {% endif %}
+            {% if v.slide %}
+            <li><i class="icon-li icon-file"></i> <a href="{{ v.slide }}" target="_blank">Slide</a></li>
+            {% endif %}
+            {% if v.poster %}
+            <li><i class="icon-li icon-file"></i> <a href="{{ v.poster }}" target="_blank">Demo Poster</a></li>
+            {% endif %}
+            {% if v.video %}
+            <li>
+              <i class="icon-li icon-youtube-play"></i>
+              <a href="https://www.youtube.com/embed/{{v.video}}?rel=0&amp;wmode=transparent" 
+                    onclick="return hs.htmlExpand(this, {objectType: 'iframe', width: 672, height: 504, 
+                    allowSizeReduction: false, wrapperClassName: 'dark borderless-html no-footer', 
+                    preserveContent: false, objectLoadTime: 'after'})" class="highslide">Video</a>
+            </li>
+            {% endif %}
+            <li><i class="icon-li icon-bookmark"></i> {{ v.description }}</li>
+          </ul>
+        </div>
+      {% if (loop.index - 1)% 3 == 2 or loop.index == len(data.projects) %}
+      </div>
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 
@@ -147,7 +241,15 @@
     </div>
     <div class="row">
       <div class="col-ng-12 col-md-12 col-sm-12 col-xs-12">
-      
+      {% for v in data.publications %}
+        <div class="row">
+          <div class="col-ng-12 col-md-12 col-sm-12 col-xs-12">
+            <h4>{{ v.name }}<br />
+              <small>{{ v.authors }}</small>
+            </h4>
+          </div>
+        </div>
+      {% endfor %}
       </div>
     </div>
   </div>
@@ -162,7 +264,9 @@
         <div class="col-ng-12 col-md-12 col-sm-12 col-xs-12">
           <h4></h4>
           <ul class="list-unstyled icons-ul">
-          
+          {% for v in data.contributions %}
+            <li><i class="icon-li icon-globe"></i><a href="{{ v.link }}">{{ v.name }}</a></li>
+          {% endfor %}
           </ul>
         </div>
       </div>
@@ -175,7 +279,15 @@
       <span id="talks" class="anchor"></span>
     </div>
     <div class="row">
-      
+      {% for talk in data.talks %}
+      <div class="col-ng-4 col-md-4 col-sm-4 col-xs-12">
+        <iframe src="https://www.slideshare.net/slideshow/embed_code/{{ talk.slideshare_id }}"
+          frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+          style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
+          allowfullscreen class="img-responsive talk-block">
+        </iframe>
+      </div>
+      {% endfor %}
     </div>
   </div>
 
@@ -193,8 +305,18 @@
         <small>Self-rated familiarity ranging from 0 to 5</small>
       </h3>
       <div class="row">
-        
-        
+        {% set half = ceil(len(data.tools) / 2) %}
+        {% for v in data.tools %}
+        {% if (loop.index - 1) % half == 0 %}
+        <div class="col-ng-6 col-md-6 col-sm-6 col-xs-12">
+          <ul class="list-unstyled icons-ul">
+        {% endif %}
+          <li><i class="icon-li icon-bookmark"></i>{{ v.name }}: {{ v.score }}</li>
+        {% if (loop.index - 1) % half == half - 1 or (loop.index - 1) == len(data.tools) - 1%}
+          </ul>
+        </div>
+        {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -204,7 +326,20 @@
       <h2 class="pull-left">Clubs</h2>
       <span id="clubs" class="anchor"></span>
     </div>
-    
+    {% for v in data.clubs %}
+    <div class="row">
+      <div class="col-ng-12 col-md-12 col-sm-12 col-xs-12">
+        <h4>{{ v.name }}<br />
+          <small>{{ v.time }}</small>
+        </h4>
+        <ul class="list-unstyled icons-ul">
+          {% if v.role %}
+          <li><i class="icon-li icon-user"></i>{{ v.role }}</li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 
   <!-- Placed at the end of the document so the pages load faster -->
