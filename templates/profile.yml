@@ -3,6 +3,15 @@ experience:
     link: 'http://www.airbnb.cn'
     logo:
     time: Apr 2018 - Current
+  - name: ByteDance
+    logo:
+    time: Feb 2017 - May 2017
+  - name: Google
+    logo:
+    time: Jul 2017 - Sep 2017
+  - name: ByteDance
+    logo:
+    time: Oct 2017 - Dec 2017
 profile:
   social_links:
     - name: LinkedIn
