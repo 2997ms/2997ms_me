@@ -4,21 +4,25 @@ experience:
     logo: airbnb.png
     time: Apr 2018 - Current
     title: Full Stack Software Engineer
+    description: China Booking Team
   - name: ByteDance
     link: 'http://www.toutiao.com'
     logo: byteDance.png
     time: Feb 2017 - May 2017
     title: Software Engineer Intern
+    description: ByteDance Data Team
   - name: Google
     link: 'http://www.google.com'
     logo: google.png
     time: Jul 2017 - Sep 2017
     title: Software Engineer Intern
+    description: Google Input Team
   - name: ByteDance
     link: 'http://www.toutiao.com'
     logo: byteDance.png
     time: Oct 2017 - Dec 2017
     title: Software Engineer Intern
+    description: ByteDance Data Team
 profile:
   social_links:
     - name: LinkedIn
