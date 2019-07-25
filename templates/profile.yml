@@ -1,19 +1,19 @@
 experience:
   - name: Airbnb
     link: 'http://www.airbnb.cn'
-    logo:
+    logo: airbnb.png
     time: Apr 2018 - Current
   - name: ByteDance
     link: 'http://www.toutiao.com'
-    logo:
+    logo: byteDance.png
     time: Feb 2017 - May 2017
   - name: Google
     link: 'http://www.google.com'
-    logo:
+    logo: google.png
     time: Jul 2017 - Sep 2017
   - name: ByteDance
     link: 'http://www.toutiao.com'
-    logo:
+    logo: byteDance.png
     time: Oct 2017 - Dec 2017
 profile:
   social_links:
