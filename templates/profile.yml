@@ -29,7 +29,6 @@ experience:
     time: Feb 2017 - May 2017
     title: Software Engineer Intern
     description: ByteDance Data Team
-# goal:
 
 profile:
   social_links:
@@ -103,4 +102,11 @@ contests:
 #   - name: Wechat 
 #   - name: Youtube
 
+# BlockChain
+# tools:
+#   - name: Java
+#   - name: C++
+#   - name: Javascript
+#   - name: Scala
+  # - name: AWS
 
