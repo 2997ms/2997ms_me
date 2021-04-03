@@ -30,13 +30,13 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="page-scroll"><a href="#experience">Experience</a></li>
-          <li class="page-scroll"><a href="#education">Education</a></li>
-          <li class="page-scroll"><a href="#contests">Contests</a></li>
+          <li class="page-scroll"><a href="#goal">Goal</a></li>
+          <li class="page-scroll"><a href="#contests">Contests HomePage</a></li>
           <li class="page-scroll"><a href="#projects">Projects</a></li>
           <li class="page-scroll"><a href="#contributions">Contributions</a></li>
           <li class="page-scroll"><a href="#talks">Talks</a></li>
-          <li class="page-scroll"><a href="#tools">Tools & Programming Languages</a></li>
+          <li class="page-scroll"><a href="#experience">Experience</a></li>
+          <li class="page-scroll"><a href="#education">Education</a></li>
         </ul>
       </div>
     </div>
@@ -69,72 +69,16 @@
     </div>
   </div>
 
-  <div class="chess">
-    <div class="container section">
-      <div class="clearfix anchor-parent">
-        <h2 class="pull-left">Experience</h2>
-        <span id="experience" class="anchor"></span>
-      </div>
-      {% for v in data.experience %}
-      {% if (loop.index - 1) % 3 == 0 %}
-      <div class="row">
-      {% endif %}
-        <div class="col-ng-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="text-center">
-            <a href="{{ v.link }}" target="_blank">
-              <img src="static/img/{{ v.logo }}" alt="{{ v.name }}" height="75px">
-            </a>
-          </div>
-          <h4>{{ v.name }}<br /><small>{{ v.time }}</small></h4>
-          {% if v.tags %}
-          <p>
-          {% for t in v.tags %}
-            <span class="label label-{{ tagNameToClass(data, t) }}">{{ t }}</span>
-          {% endfor %}
-          </p>
-          {% endif %}
-          <ul class="list-unstyled icons-ul">
-            <li><i class="icon-li icon-user"></i> {{ v.title }}</li>
-            <li><i class="icon-li icon-bookmark"></i> {{ v.description }}</li>
-          </ul>
-        </div>
-      {% if (loop.index - 1)% 3 == 2 or loop.index == len(data.experience) %}
-      </div>
-      {% endif %}
-      {% endfor %}
-      </div>
-    </div>
-  </div>
-
   <div class="container section">
     <div class="clearfix anchor-parent">
-      <h2 class="pull-left">Education</h2>
-      <span id="education" class="anchor"></span>
+      <h2 class="pull-left">Goal</h2>
+      <span id="goal" class="anchor"></span>
     </div>
     <div class="row">
-      {% for v in data.education %}
-      <div class="col-ng-6 col-md-6 col-sm-6 col-xs-12">
-        <div class="edu-logo inline">
-          <a href="{{ v.link }}" target="_blank">
-            <img src="static/img/{{ v.logo }}" alt="{{ v.name }}" height="75px">
-          </a>
-        </div>
-        <div class="inline edu-desc">
-          <h4>{{ v.name }}<br /><small>{{ v.time }}</small></h4>
-          {% if v.tags %}
-          <p>
-          {% for t in v.tags %}
-            <span class="label label-{{ tagNameToClass(data, t) }}">{{ t }}</span>
-          {% endfor %}
-          </p>
-          {% endif %}
-          <ul class="list-unstyled icons-ul">
-            <li><i class="icon-li icon-user"></i> {{ v.title }}</li>
-            <li><i class="icon-li icon-bookmark"></i> {{ v.description }}</li>
-          </ul>
-        </div>
+      <div class="col-ng-12 col-md-12 col-sm-12 col-xs-12">
+        <h4>Be an indie geeker and excellent self-media practitioner.<br />
+        </h4>
       </div>
-      {% endfor %}
     </div>
   </div>
 
@@ -291,7 +235,7 @@
     </div>
   </div>
 
-  <div class="chess">
+<!--   <div class="chess">
     <div class="container section">
       <div class="clearfix anchor-parent">
         <h2 class="pull-left">Tools & Programming Languages</h2>
@@ -302,7 +246,6 @@
           <li><i class="icon-li icon-bookmark"></i>Linux</li>
         </ul>
       <h3>Tools & Programming Languages<br />
-        <small>Self-rated familiarity ranging from 0 to 5</small>
       </h3>
       <div class="row">
         {% set half = ceil(len(data.tools) / 2) %}
@@ -318,6 +261,75 @@
         {% endif %}
         {% endfor %}
       </div>
+    </div>
+  </div> -->
+
+    <div class="chess">
+    <div class="container section">
+      <div class="clearfix anchor-parent">
+        <h2 class="pull-left">Experience</h2>
+        <span id="experience" class="anchor"></span>
+      </div>
+      {% for v in data.experience %}
+      {% if (loop.index - 1) % 3 == 0 %}
+      <div class="row">
+      {% endif %}
+        <div class="col-ng-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="text-center">
+            <a href="{{ v.link }}" target="_blank">
+              <img src="static/img/{{ v.logo }}" alt="{{ v.name }}" height="75px">
+            </a>
+          </div>
+          <h4>{{ v.name }}<br /><small>{{ v.time }}</small></h4>
+          {% if v.tags %}
+          <p>
+          {% for t in v.tags %}
+            <span class="label label-{{ tagNameToClass(data, t) }}">{{ t }}</span>
+          {% endfor %}
+          </p>
+          {% endif %}
+          <ul class="list-unstyled icons-ul">
+            <li><i class="icon-li icon-user"></i> {{ v.title }}</li>
+            <li><i class="icon-li icon-bookmark"></i> {{ v.description }}</li>
+          </ul>
+        </div>
+      {% if (loop.index - 1)% 3 == 2 or loop.index == len(data.experience) %}
+      </div>
+      {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="clearfix anchor-parent">
+      <h2 class="pull-left">Education</h2>
+      <span id="education" class="anchor"></span>
+    </div>
+    <div class="row">
+      {% for v in data.education %}
+      <div class="col-ng-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="edu-logo inline">
+          <a href="{{ v.link }}" target="_blank">
+            <img src="static/img/{{ v.logo }}" alt="{{ v.name }}" height="75px">
+          </a>
+        </div>
+        <div class="inline edu-desc">
+          <h4>{{ v.name }}<br /><small>{{ v.time }}</small></h4>
+          {% if v.tags %}
+          <p>
+          {% for t in v.tags %}
+            <span class="label label-{{ tagNameToClass(data, t) }}">{{ t }}</span>
+          {% endfor %}
+          </p>
+          {% endif %}
+          <ul class="list-unstyled icons-ul">
+            <li><i class="icon-li icon-user"></i> {{ v.title }}</li>
+            <li><i class="icon-li icon-bookmark"></i> {{ v.description }}</li>
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 
