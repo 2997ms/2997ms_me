@@ -31,12 +31,11 @@
         <ul class="nav navbar-nav">
           <li class="page-scroll"><a href="#experience">Experience</a></li>
           <li class="page-scroll"><a href="#education">Education</a></li>
+          <li class="page-scroll"><a href="#contests">Contests</a></li>
           <li class="page-scroll"><a href="#projects">Projects</a></li>
-          <li class="page-scroll"><a href="#publications">Publications</a></li>
           <li class="page-scroll"><a href="#contributions">Contributions</a></li>
           <li class="page-scroll"><a href="#talks">Talks</a></li>
           <li class="page-scroll"><a href="#tools">Tools & Programming Languages</a></li>
-          <li class="page-scroll"><a href="#clubs">Clubs</a></li>
         </ul>
       </div>
     </div>
@@ -56,7 +55,7 @@
           </div>
           <ul class="list-unstyled icons-ul misc-info">
             <li><i class="icon-li icon-envelope"></i><a href="mailto://wangchong756@gmail.com">wangchong756@gmail.com</a></li>
-            <li><i class="icon-li icon-map-marker"></i>望奎</li>
+            <li><i class="icon-li icon-map-marker"></i>Wang Kui, HeiLongJiang</li>
             <li><i class="icon-li icon-pencil"></i><a href="https://2997ms.github.io">Blog</a></li>
           </ul>
           <div class="social-links">
@@ -141,6 +140,44 @@
   <div class="chess">
     <div class="container section">
       <div class="clearfix anchor-parent">
+        <h2 class="pull-left">Contests HomePage</h2>
+        <span id="contests" class="anchor"></span>
+      </div>
+      {% for v in data.contests %}
+      {% if (loop.index - 1) % 3 == 0 %}
+      <div class="row">
+      {% endif %}
+        <div class="col-ng-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="text-center">
+            <a href="{{ v.link }}" target="_blank">
+              <img src="static/img/{{ v.logo }}" alt="{{ v.name }}" height="75px">
+            </a>
+          </div>
+          <div class="inline edu-desc">
+            <h4>{{ v.name }}<br /><small>{{ v.time }}</small></h4>
+          {% if v.tags %}
+          <p>
+          {% for t in v.tags %}
+            <span class="label label-{{ tagNameToClass(data, t) }}">{{ t }}</span>
+          {% endfor %}
+          </p>
+          {% endif %}
+         <!--  <ul class="list-unstyled icons-ul">
+            <li><i class="icon-li icon-user"></i> {{ v.handle }}</li>
+          </ul> -->
+        </div>
+        </div>
+      {% if (loop.index - 1)% 3 == 2 or loop.index == len(data.contests) %}
+      </div>
+      {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="chess">
+    <div class="container section">
+      <div class="clearfix anchor-parent">
         <h2 class="pull-left">Projects</h2>
         <span id="projects" class="anchor"></span>
       </div>
@@ -216,26 +253,6 @@
     </div>
   </div>
 
-  <div class="container section">
-    <div class="clearfix anchor-parent">
-      <h2 class="pull-left">Publications</h2>
-      <span id="publications" class="anchor"></span>
-    </div>
-    <div class="row">
-      <div class="col-ng-12 col-md-12 col-sm-12 col-xs-12">
-      {% for v in data.publications %}
-        <div class="row">
-          <div class="col-ng-12 col-md-12 col-sm-12 col-xs-12">
-            <h4>{{ v.name }}<br />
-              <small>{{ v.authors }}</small>
-            </h4>
-          </div>
-        </div>
-      {% endfor %}
-      </div>
-    </div>
-  </div>
-
   <div class="chess">
     <div class="container section">
       <div class="clearfix anchor-parent">
@@ -301,27 +318,6 @@
         {% endfor %}
       </div>
     </div>
-  </div>
-
-  <div class="container section">
-    <div class="clearfix anchor-parent">
-      <h2 class="pull-left">Clubs</h2>
-      <span id="clubs" class="anchor"></span>
-    </div>
-    {% for v in data.clubs %}
-    <div class="row">
-      <div class="col-ng-12 col-md-12 col-sm-12 col-xs-12">
-        <h4>{{ v.name }}<br />
-          <small>{{ v.time }}</small>
-        </h4>
-        <ul class="list-unstyled icons-ul">
-          {% if v.role %}
-          <li><i class="icon-li icon-user"></i>{{ v.role }}</li>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-    {% endfor %}
   </div>
 
   <!-- Placed at the end of the document so the pages load faster -->
