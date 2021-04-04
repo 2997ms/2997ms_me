@@ -96,11 +96,19 @@ contests:
 # projects:
 #   - name: TopCoder
 
-# publications:
+publications:
+  - name: 'A Malware Detection Method Based on Sandbox, Binary Instrumentation and Multidimensional Feature Extraction'
+    authors: '<b>Chong Wang</b>, Jianwei Ding, Tao Guo, Baojiang Cui'
+    link: https://link.springer.com/chapter/10.1007/978-3-319-69811-3_39
+  - name: 'A program behavior recognition algorithm based on assembly instruction sequence similarity'
+    authors: 'Baojiang Cui, <b>Chong Wang</b>, GuoWei Dong, JinXin Ma'
+    link: https://link.springer.com/chapter/10.1007/978-3-319-49106-6_2
 
-# Public Media:
-#   - name: Wechat 
-#   - name: Youtube
+publicmedia:
+  - name: Wechat Official Account
+    logo: qrcode.bmp
+  - name: Youtube
+    link: 'https://www.youtube.com/channel/UCFFTi3gmU-DgplC4wqhZDpg'
 
 # BlockChain
 # tools:
@@ -108,5 +116,5 @@ contests:
 #   - name: C++
 #   - name: Javascript
 #   - name: Scala
-  # - name: AWS
+#   - name: AWS
 
