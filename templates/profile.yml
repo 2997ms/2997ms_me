@@ -47,14 +47,14 @@ education:
     link: 'https://www.bupt.edu.cn/'
     logo: bupt.jpg
     time: Aug 2011 - Jun 2015
-    title: Master's Degree
-    description: Information Security
+    title: Bachelor's Degree
+    description: Computer Science
   - name: Beijing University of Posts and </br>Telecommunications
     link: 'https://www.bupt.edu.cn/'
     logo: bupt.jpg
     time: Sep 2015 - Jun 2018
-    title: Bachelor's Degree
-    description: Computer Science
+    title: Master's Degree
+    description: Information Security
 
 contests:
   - name: Codeforces Rating 2000+
