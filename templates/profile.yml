@@ -1,22 +1,120 @@
 experience:
+  - name: Amazon
+    link: 'https://amazon.co.uk/'
+    logo: amazon.png
+    time: Jul 2020 - Current
+    title: Software Development Engineer
+    description: Prime Video Team
   - name: Airbnb
-    link: 'http://www.airbnb.cn'
-    logo:
-    time: Apr 2018 - Current
+    link: 'https://www.airbnb.cn'
+    logo: airbnb.png
+    time: Apr 2018 - Jul 2020
+    title: Full-Stack Engineer
+    description: China Booking Team
   - name: ByteDance
-    logo:
-    time: Feb 2017 - May 2017
-  - name: Google
-    logo:
-    time: Jul 2017 - Sep 2017
-  - name: ByteDance
-    logo:
+    link: 'http://www.toutiao.com'
+    logo: byteDance.png
     time: Oct 2017 - Dec 2017
+    title: Software Engineer Intern
+    description: ByteDance Data Team
+  - name: Google
+    link: 'http://www.google.com'
+    logo: google.png
+    time: Jul 2017 - Sep 2017
+    title: Software Engineer Intern
+    description: Google Input Team
+  - name: ByteDance
+    link: 'http://www.toutiao.com'
+    logo: byteDance.png
+    time: Feb 2017 - May 2017
+    title: Software Engineer Intern
+    description: ByteDance Data Team
+
 profile:
   social_links:
-    - name: LinkedIn
-      icon: icon-linkedin-sign
-      link: 'https://www.linkedin.com/in/chong-wang-93524aa8/'
+    - name: Twitter
+      icon: icon-twitter-sign
+      link: 'https://twitter.com/wangchong756'
+    - name: Facebook
+      icon: icon-facebook-sign
+      link: 'https://www.facebook.com/profile.php?id=100005610553662'
     - name: Github
       icon: icon-github-sign
       link: 'https://github.com/2997ms'
+
+education:
+  - name: Beijing University of Posts and </br>Telecommunications
+    link: 'https://www.bupt.edu.cn/'
+    logo: bupt.jpg
+    time: Aug 2011 - Jun 2015
+    title: Bachelor's Degree
+    description: Computer Science
+  - name: Beijing University of Posts and </br>Telecommunications
+    link: 'https://www.bupt.edu.cn/'
+    logo: bupt.jpg
+    time: Sep 2015 - Jun 2018
+    title: Master's Degree
+    description: Information Security
+
+contests:
+  - name: Codeforces Rating 2000+
+    link: 'https://codeforces.com/profile/OrangeDream'
+    time: Jun 2016 - Current
+    logo: codeforces.png
+    handle: OrangeDream
+  - name: Codechef Rating 2000+
+    link: 'https://www.codechef.com/users/wangchong756'
+    time: Mar 2016 - Current
+    logo: codechef.jpeg
+    handle: wangchong756
+  - name: Hackerrank Rating 2000+
+    link: 'https://www.hackerrank.com/2997ms'
+    time: Oct 2015 - Current
+    logo: hackerrank.png
+    handle: 2997ms
+  - name: AtCoder Rating 1500+
+    link: 'https://atcoder.jp/users/wangchong756'
+    time: Jun 2016 - Current
+    logo: atcoder.jpeg
+    handle: OrangeDream
+  - name: LeetCode Rating 2400+
+    link: 'https://leetcode-cn.com/u/2997ms/'
+    logo: leetcode.png
+    time: Jun 2016 - Current
+    handle: 2997ms
+  - name: POJ Problems 600+
+    link: 'http://poj.org/userstatus?user_id=wangchong756'
+    handle: wangchong756
+    logo: POJ.png
+    time: Sep 2011 - Current
+  - name: 51nod Rank 30
+    link: 'http://www.51nod.com/User/Index.html#userId=5374'
+    logo: 51nod.png
+    time: Sep 2015 - Current
+    handle: 2997ms
+
+# projects:
+#   - name: TopCoder
+
+publications:
+  - name: 'A Malware Detection Method Based on Sandbox, Binary Instrumentation and Multidimensional Feature Extraction'
+    authors: '<b>Chong Wang</b>, Jianwei Ding, Tao Guo, Baojiang Cui'
+    link: https://link.springer.com/chapter/10.1007/978-3-319-69811-3_39
+  - name: 'A program behavior recognition algorithm based on assembly instruction sequence similarity'
+    authors: 'Baojiang Cui, <b>Chong Wang</b>, GuoWei Dong, JinXin Ma'
+    link: https://link.springer.com/chapter/10.1007/978-3-319-49106-6_2
+
+publicmedia:
+  - name: Wechat Official Account
+    logo: qrcode.bmp
+  - name: Youtube
+    link: 'https://www.youtube.com/channel/UCFFTi3gmU-DgplC4wqhZDpg'
+
+# BlockChain
+# tools:
+#   - name: Java
+#   - name: C++
+#   - name: Javascript
+#   - name: Scala
+#   - name: AWS
+
